@@ -6,6 +6,7 @@ public class GM : MonoBehaviour {
 
 	static public byte activeHand = 0;
     public GameObject ball;
+
 	UIManager uiManager;
 	float timeElapsed = 0; 
     float timeLeft = 60f * 10f;
@@ -42,7 +43,6 @@ public class GM : MonoBehaviour {
     			SendBall ();
                 RunClock();
     			state = State.RUNNING;
-                GameObject.Find("Hands").GetComponent<HandManager>().active = true;
     			break;
 
     		case State.RUNNING:
